@@ -7,30 +7,7 @@
 		var $header = $('.header'),
 			$search = $('.fa-search', $header);
 
-		// 1. Search Popup
-		if ($search.length) {
-			var $boxSearch = $('.box-search', $header);
 
-			$search.on('click', function (event) {
-				event.preventDefault();
-				$boxSearch.addClass('active');
-				$('.search-field', $boxSearch).focus();
-			});
-
-			$('.kd-close', $boxSearch).on('click', function (event) {
-				event.preventDefault();
-				$boxSearch.removeClass('active');
-			});
-
-			$(document).on('keydown', function (event) {
-
-				if (event.keyCode === 27) {
-
-					$boxSearch.removeClass('active');
-				}
-			});
-
-		}
 
 
 		// 3. Menu Mobile

@@ -6,7 +6,7 @@
 	font-style: normal;
 	font-weight: 400;
 }
-.trajan.small {
+.trajan-small {
 	font-variant: small-caps;
 }
 .trajan-semibold {
@@ -25,9 +25,23 @@ img.wrap-left {
 	background:#eee;
 }
 .section {
+	margin: 0 0 150px;
+}
+.section-small {
 	margin: 0 0 50px;
 }
-/* =========== 1. Reset CSS  =========== */
+p.footer {
+	line-height:18px;
+	font-size:14px;
+}
+span.larger-font {
+	font-size:32px;
+}
+.logo img {
+	padding: 0 0 10px;
+}
+
+/* =========== RESET  =========== */
 img,
 legend {
   border: 0;
@@ -236,7 +250,9 @@ input:-moz-placeholder,
 textarea:-moz-placeholder {
   color: #ababab;
 }
-/* =========== 2. Typography  =========== */
+
+
+/* =========== TYPE =========== */
 h1,
 .h1,
 h2,
@@ -410,10 +426,10 @@ input[type="email"],
 input[type="file"],
 select,
 textarea {
-  height: 36px;
+
   width: 100%;
   border: 1px solid #ababab;
-  padding: 0 10px;
+
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
@@ -436,12 +452,14 @@ iframe {
   border: 0;
   max-width: 100%;
 }
-/* ===========  3. General  =========== */
+
+
+/* ===========  BODY  =========== */
 body {
   margin: 0;
   padding: 100px 0 0;
   font-family: Helvetica, Sans-Serif;
-  font-size: 14px;
+  font-size: 15px;
   background: #fff;
   color: #777;
   overflow-x: hidden;
@@ -499,14 +517,16 @@ body {
   -o-transition: visibility 0.3s ease, opacity 0.3s ease;
   transition: visibility 0.3s ease, opacity 0.3s ease;
 }
-/* ===========  4. Header  =========== */
+
+
+/* ===========  HEADER MENU  =========== */
 .header {
   width: 220px;
   bottom: 0;
   top: 100px;
   text-align: right;
   z-index: 9;
-  position:sticky;
+  position:absolute;
 }
 .header-text {
   margin-bottom: 50px;
@@ -529,15 +549,12 @@ body {
   text-align: right;
 }
 
-.table-cell {
-  display: table-cell;
-  vertical-align: middle;
-}
 .main-menu {
   font-family: Helvetica, Sans-Serif;
   letter-spacing: 1px;
   font-size: 18px;
   line-height: 24px;
+  padding: 0 0 40px;
 }
 .main-menu ul,
 .main-menu li {
@@ -682,6 +699,8 @@ body {
   font-size: 12px;
   color: #ababab;
 }
+
+
 /* ===========  5. Projects  =========== */
 .projects {
   padding-left: 80px;
@@ -824,6 +843,9 @@ body {
 .project .popup:last-child img {
   margin-bottom: 0;
 }
+
+
+
 /* ===========  6. Posts  =========== */
 .post {
   margin-bottom: 40px;
@@ -965,7 +987,9 @@ body {
   color: inherit !important;
   opacity: 0.8;
 }
-/* ===========  7. Footer  =========== */
+
+
+/* ===========  FOOTER =========== */
 .footer-inner {
   margin-top: 80px;
   border-top: 1px solid #ababab;
@@ -985,7 +1009,8 @@ body {
   margin: 0;
   padding: 0;
 }
-/* ===========  8. Preload  =========== */
+
+/* ===========  LOADER =========== */
 #preload {
   top: 0;
   left: 0;
@@ -1034,7 +1059,9 @@ body {
     transform: scale(1);
   }
 }
-/* ===========  9. Responsive  =========== */
+
+
+/* ===========  MOBILE =========== */
 @media screen and (max-width: 991px) {
   .preload {
     display: none;
@@ -1042,6 +1069,13 @@ body {
   .mobile {
     display: block;
   }
+.mobile .logo {
+	font-size: 30px;
+	padding-left: 20px;
+}
+body {
+	padding-top: 50px;
+}
   .header,
   .menu-left .header {
     left: 0;
@@ -1122,50 +1156,36 @@ body {
   }
 }
 @media screen and (max-width: 768px) {
-  body {
-    padding-top: 30px;
-  }
-  .project-item {
-    margin-bottom: 30px;
-  }
+	body {
+		padding-top: 30px;
+	}
 }
 @media screen and (max-width: 600px) {
-  .post .post-content {
-    padding: 20px;
-  }
-  .project .detail-content {
-    padding: 20px;
-  }
-  .project .images-project {
-    margin-top: 30px;
-  }
-  #comments .children {
-    padding-left: 0;
-  }
+	.mobile .logo {
+		font-size: 27px;
+		padding-left: 20px;
+	}
 }
 @media screen and (max-width: 480px) {
-  .projects {
-    padding-left: 0;
-    padding-right: 0;
-  }
-  .footer-inner {
-    margin-left: 0;
-    margin-right: 0;
-  }
-  .mobile {
-    margin-bottom: 50px;
-  }
-  .mobile .logo {
-    font-size: 30px;
-    padding-left: 20px;
-  }
-  .project-item {
-    margin-bottom: 20px;
-  }
-  .navigation-wrap {
-    margin-top: 30px;
-  }
-  .footer-inner {
-    margin-top: 50px;
-  }
+	.projects {
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.footer-inner {
+		margin-left: 0;
+		margin-right: 0;
+	}
+	.mobile {
+		margin-bottom: 50px;
+	}
+	.mobile .logo {
+		font-size: 25px;
+		padding-left: 30px;
+	}
+	.navigation-wrap {
+		margin-top: 30px;
+	}
+	.footer-inner {
+		margin-top: 50px;
+	}
 }
