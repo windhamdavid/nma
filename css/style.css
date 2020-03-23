@@ -374,16 +374,7 @@ blockquote {
 blockquote p:last-child {
   margin-bottom: 0;
 }
-blockquote:before {
-  position: absolute;
-  left: 0;
-  top: 0;
-  content: '\f10d';
-  font-family: 'FontAwesome';
-  display: inline-block;
-  color: #ababab;
-  font-size: 24px;
-}
+
 blockquote footer,
 blockquote cite {
   font-size: 12px;
